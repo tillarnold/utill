@@ -1,10 +1,10 @@
 {
     "name": "utill",
     "version": "0.1.0",
-    "homepage": "https://github.com/tillarnold/utill-selector",
-    "bugs": "https://github.com/tillarnold/utill-selector/issues",
+    "homepage": "https://github.com/tillarnold/utill",
+    "bugs": "https://github.com/tillarnold/utill/issues",
     "author": "Till Arnold",
-    "repository": "https://github.com/tillarnold/utill-selector",
+    "repository": "https://github.com/tillarnold/utill",
     "main": "./index.js",
     "devDependencies": {
         "mocha": "~1.18.2",
