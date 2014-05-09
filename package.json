@@ -1,6 +1,6 @@
 {
     "name": "utill",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "homepage": "https://github.com/tillarnold/utill",
     "bugs": "https://github.com/tillarnold/utill/issues",
     "author": "Till Arnold",
@@ -11,11 +11,15 @@
         "mocha": "~1.18.2",
         "should": "~3.3.1",
         "mocha-lcov-reporter": "0.0.1",
-        "coveralls": "~2.10.0"
+        "coveralls": "~2.10.0",
+        "istanbul": "~0.2.8"
     },
     "testling": {
         "harness": "mocha-tdd",
-        "files": ["test/*.js", "test/browser/*.js"],
+        "files": [
+            "test/*.js",
+            "test/browser/*.js"
+        ],
         "browsers": [
             "ie/8..latest",
             "firefox/16..latest",
@@ -28,6 +32,9 @@
         ]
     },
     "scripts": {
-        "test": "mocha --ui tdd"
+        "test": "_mocha --ui tdd",
+        "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+        "test-coveralls": "istanbuls cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+        "generate-istanbul-report": "istanbul report html"
     }
 }
