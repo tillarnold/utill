@@ -9,7 +9,9 @@
     "main": "./index.js",
     "devDependencies": {
         "mocha": "~1.18.2",
-        "should": "~3.3.1"
+        "should": "~3.3.1",
+        "istanbul": "0.1.45",
+        "mocha-lcov-reporter": "0.0.1"
     },
     "testling": {
         "harness": "mocha-tdd",
