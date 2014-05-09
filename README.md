@@ -6,7 +6,6 @@
 [![devDependency Status](https://david-dm.org/tillarnold/utill/dev-status.svg)](https://david-dm.org/tillarnold/utill#info=devDependencies)
 [![Build Status](https://travis-ci.org/tillarnold/utill.svg?branch=master)](https://travis-ci.org/tillarnold/utill)
 [![Code Climate](https://codeclimate.com/github/tillarnold/utill.png)](https://codeclimate.com/github/tillarnold/utill)
-[![Code Climate Coverage](https://codeclimate.com/github/tillarnold/utill/coverage.png)](https://codeclimate.com/github/tillarnold/utill)
 
 # utill
 
