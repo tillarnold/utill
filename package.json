@@ -12,7 +12,8 @@
         "should": "~3.3.1",
         "mocha-lcov-reporter": "0.0.1",
         "coveralls": "~2.10.0",
-        "istanbul": "~0.2.8"
+        "istanbul": "~0.2.8",
+        "jshint": "~2.5.0"
     },
     "testling": {
         "harness": "mocha-tdd",
@@ -32,9 +33,11 @@
         ]
     },
     "scripts": {
-        "test": "_mocha --ui tdd",
+        "test": "npm run lintv && npm run test-coverage && npm run generate-istanbul-report",
         "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
         "test-coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-        "generate-istanbul-report": "istanbul report html"
+        "generate-istanbul-report": "istanbul report html",
+        "lint": "jshint ./lib ./test ./index.js",
+        "lintv": "jshint --verbose ./lib ./test ./index.js"
     }
 }

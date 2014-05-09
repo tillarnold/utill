@@ -1,5 +1,12 @@
+//Defined by mocha
+/* global describe: false */
+/* global it: false */
+
+//Should tests are allowed
+/* jshint -W030 */
+
 var helpers = require('../lib/helpers');
-var should = require('should')
+require('should');
 
 
 
@@ -15,8 +22,8 @@ describe('helpers', function() {
         });
 
         it('should return false if an Object', function() {
-            helpers.isString(new Object()).should.be.false;
-            helpers.isString(new Array()).should.be.false;
+            helpers.isString({}).should.be.false;
+            helpers.isString([]).should.be.false;
             helpers.isString([1, 2, 3]).should.be.false;
         });
 
@@ -35,7 +42,7 @@ describe('helpers', function() {
         });
 
         it('should return false for arrays', function() {
-            helpers.isString([1, 500, {}, "123", new String(), 5]).should.be.false;
+            helpers.isString([1, 500, {}, "123", "", 5]).should.be.false;
             helpers.isString([]).should.be.false;
             helpers.isString(["Hello world"]).should.be.false;
         });
@@ -81,7 +88,7 @@ describe('helpers', function() {
         });
 
         it('should mixin functions correctly', function() {
-            mixedObject.myFunction().should.be.arguments
+            mixedObject.myFunction().should.be.arguments;
         });
 
         it('should prefere the property values from the second object', function() {
@@ -110,7 +117,7 @@ describe('helpers', function() {
     describe('#each()', function() {
         it('should iterate Array', function() {
             var startArray = [123,
-                function() {}, 'hello world', new Array()
+                function() {}, 'hello world', []
             ];
 
             var outArray = [];
@@ -131,7 +138,7 @@ describe('helpers', function() {
 
                 resultArray.should.eql([
                     [1, 2, 3], 'hello', 42, {}
-                ])
+                ]);
 
             }
 
