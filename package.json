@@ -4,6 +4,7 @@
     "homepage": "https://github.com/tillarnold/utill",
     "bugs": "https://github.com/tillarnold/utill/issues",
     "author": "Till Arnold",
+    "description": "A utility library for nodejs and the browser",
     "repository": "https://github.com/tillarnold/utill",
     "main": "./index.js",
     "devDependencies": {
