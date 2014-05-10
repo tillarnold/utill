@@ -34,11 +34,8 @@
   },
   "scripts": {
     "test": "mocha --ui bdd",
-    "test-all": "npm run lintv && npm run test-coverage && npm run generate-istanbul-report",
-    "test-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
-    "test-coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "generate-istanbul-report": "istanbul report html",
-    "lint": "jshint ./lib ./test ./index.js",
-    "lintv": "jshint --verbose ./lib ./test ./index.js"
+    "test-all": "echo if you have make installed use 'make test' && jshint --verbose ./lib ./test ./index.js && istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && istanbul report html",
+    "test-coverage": "make test-coverage",
+    "test-coveralls": "make test-coverall"
   }
 }
