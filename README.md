@@ -13,3 +13,4 @@
  > A utility library for nodejs and the browser. 
  
 
+This is in early development. The API may (and will) change often.
