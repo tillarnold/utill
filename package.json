@@ -24,7 +24,10 @@
     "browsers": [
       "ie/8..latest",
       "firefox/16..latest",
-      "chrome/22.latest",
+      "ff/nightly",
+      "chrome/11..latest",
+      "chrome/canary",
+      "opera/next",
       "safari/6",
       "opera/11..latest",
       "iphone/6",
