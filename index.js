@@ -10,5 +10,7 @@ module.exports = {
 
   domHelpers: domHelpers,
   find: selector.find,
-  findAll: selector.findAll
+  findAll: selector.findAll,
+  
+  domready:require('domready')
 };
