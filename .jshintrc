@@ -11,5 +11,6 @@
   "browser": true,
   "node": true,
   "forin": true,
-  "noarg": true
+  "noarg": true,
+  "strict":true
 }

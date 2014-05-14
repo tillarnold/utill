@@ -1,3 +1,5 @@
+"use strict";
+
 //Defined by mocha
 /* global describe: false */
 /* global it: false */

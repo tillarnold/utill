@@ -7,11 +7,14 @@
   "description": "A utility library for nodejs and the browser",
   "repository": "https://github.com/tillarnold/utill",
   "main": "./index.js",
+  "dependencies": {
+    "domready": "^1.0.5"
+  },
   "devDependencies": {
     "coveralls": "~2.10.0",
-    "domready": "^1.0.5",
     "istanbul": "~0.2.8",
     "jshint": "~2.5.0",
+    "jshint-stylish": "^0.2.0",
     "mocha": "~1.18.2",
     "mocha-lcov-reporter": "0.0.1",
     "should": "~3.3.1"
@@ -38,8 +41,9 @@
   },
   "scripts": {
     "test": "mocha --ui bdd",
-    "test-all": "echo if you have make installed use 'make test' && jshint --verbose ./lib ./test ./index.js && istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && istanbul report html",
+    "test-all": "echo if you have make installed use 'make test' && npm run lint && istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && istanbul report html",
     "test-coverage": "make test-coverage",
-    "test-coveralls": "make test-coverall"
+    "test-coveralls": "make test-coverall",
+    "lint": "jshint --reporter node_modules/jshint-stylish/stylish.js ./lib ./test ./index.js"
   }
 }

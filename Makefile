@@ -4,11 +4,8 @@ test-travis:
 	@$(MAKE) test-coveralls
 
 lint:
-	./node_modules/.bin/jshint ./lib ./test ./index.js
-
-lintv:
-	./node_modules/.bin/jshint --verbose ./lib ./test ./index.js
-
+	./node_modules/.bin/jshint --reporter node_modules/jshint-stylish/stylish.js ./lib ./test ./index.js
+  
 test-coverage:
 	./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec
 
@@ -19,7 +16,7 @@ generate-istanbul-report:
 	./node_modules/.bin/istanbul report html
 
 test:
-	@$(MAKE) lintv
+	@$(MAKE) lint
 	@$(MAKE) test-coverage
 	@$(MAKE) generate-istanbul-report
 
