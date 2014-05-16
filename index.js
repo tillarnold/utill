@@ -11,6 +11,6 @@ module.exports = {
   domHelpers: domHelpers,
   find: selector.find,
   findAll: selector.findAll,
-  
-  domready:require('domready')
+
+  domready: require('domready')
 };

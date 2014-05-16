@@ -20,4 +20,4 @@ test:
 	@$(MAKE) test-coverage
 	@$(MAKE) generate-istanbul-report
 
-.PHONY: test
+.PHONY: test 
