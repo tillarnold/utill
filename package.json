@@ -11,10 +11,10 @@
     "domready": "^1.0.5"
   },
   "devDependencies": {
-    "coveralls": "~2.10.0",
-    "istanbul": "~0.2.10",
+    "coveralls": "~2.11.1",
+    "istanbul": "~0.3.0",
     "jshint": "~2.5.0",
-    "jshint-stylish": "^0.2.0",
+    "jshint-stylish": "^0.3.0",
     "mocha": "~1.20.1",
     "mocha-lcov-reporter": "0.0.1",
     "should": "~4.0.0"
