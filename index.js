@@ -7,6 +7,8 @@ module.exports = {
   each: helpers.each,
   mixObjects: helpers.mixObjects,
   loopObject: helpers.loopObject,
+  biggest: helpers.biggest,
+  smallest: helpers.smallest,
 
   domHelpers: domHelpers,
   find: selector.find,
